@@ -1,0 +1,204 @@
+form {
+    margin: auto;
+    width: 350px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  input[type='number'],
+  input[type='email'],
+  select,
+  input[type='date'],
+  input[type='file'],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button[type='submit'] {
+    background: linear-gradient(45deg, #000, #333);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  button[type='submit']:hover {
+    background: linear-gradient(45deg, #333, #555);
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+  }
+  
+  .profile-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 8px;
+    padding: 15px;
+    background: white;
+  }
+  
+  .logoutButton {
+    background: #ffffff;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .logoutButton:hover {
+    background: #ffffff;
+  }
+  
+  .logoutButton:focus {
+    outline: none;
+  }
+  
+  /* manager css part from line no 100 to  199*/
+  .manager-home {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Welcome Banner */
+.manager-welcome {
+  background: linear-gradient(to right, #000000, #333333);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.manager-welcome h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.manager-welcome p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Dashboard Cards */
+.manager-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  width: 260px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #cc3300;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Replace original .card button with this for Link-styled buttons */
+.button-link {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 8px;
+}
+
+.button-link:hover {
+  background-color: #cc3300;
+}
+
+
+/* Summary Section */
+.manager-summary {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-left: 5px solid #cc3300;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.manager-summary h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.manager-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.manager-summary li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+

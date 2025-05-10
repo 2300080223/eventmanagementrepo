@@ -1,0 +1,630 @@
+form {
+  margin: auto;
+  width: 350px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='email'],
+select,
+input[type='date'],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button[type='submit'] {
+  background: linear-gradient(45deg, #000, #333);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button[type='submit']:hover {
+  background: linear-gradient(45deg, #333, #555);
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+.profile-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 350px;
+  text-align: center;
+  border: 3px solid #000;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+}
+
+.logoutButton {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logoutButton:hover {
+  background: #b02a37;
+}
+
+.logoutButton:focus {
+  outline: none;
+}
+
+.event-container {
+  padding: 20px;
+}
+
+.event-heading {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-table th,
+.event-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.event-table thead {
+  background-color: #f2f2f2;
+}
+
+.event-table input[type="text"] {
+  width: 90%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.book-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* line number 149 to 273 for customer home page*/
+
+.customer-home-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background-color: #fff8f0;
+  color: #3a2e2e;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  text-align: center;
+  background: linear-gradient(to right, #ff9933, #cc3300);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-banner h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.action-card {
+  background-color: white;
+  padding: 25px;
+  width: 250px;
+  border-radius: 14px;
+  text-align: center;
+  border: 2px solid #ffd699;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+}
+
+.action-card h3 {
+  color: #cc3300;
+  margin: 10px 0;
+}
+
+.action-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.action-card button {
+  background-color: #ff9933;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.action-card button:hover {
+  background-color: #e67300;
+}
+
+/* Suggestions */
+.suggestions h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #a12d33;
+}
+
+.suggestion-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.suggestion-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: scale(1.03);
+}
+
+.suggestion-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.suggestion-card h4 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  color: #b34700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quick-actions,
+  .suggestion-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-banner h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* Line number 276 to 377 customer profile*/
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border: 2px solid #ffd699;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ff9933;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  color: #a12d33;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.username {
+  color: #777;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #333;
+  text-align: left;
+}
+
+/* Side Panel */
+.profile-side {
+  background-color: #fff0e6;
+  border-radius: 16px;
+  padding: 30px;
+  width: 340px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-left: 6px solid #ffb84d;
+}
+
+.profile-side h3 {
+  margin-bottom: 15px;
+  color: #b34700;
+}
+
+.profile-side ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.profile-side li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #4d2e00;
+}
+
+.side-image {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #ffd699;
+}
+
+/* Loading State */
+.profile-loading {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-card,
+  .profile-side {
+    width: 90%;
+  }
+}
+
+
+/* From line number 380  to 476 is code for update profile page */
+.update-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf4;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Left Panel */
+.update-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: #fff0e6;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 6px solid #ffb84d;
+}
+
+.update-info h2 {
+  color: #a12d33;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.update-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.update-info li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #5c4033;
+}
+
+.info-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 4px solid #ffd699;
+  margin-top: 15px;
+}
+
+/* Right Panel */
+.update-form-card {
+  flex: 1;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #ffb84d;
+}
+
+.update-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff9933;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.update-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #cc3300;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.update-success {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.update-error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.update-form input,
+.update-form select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.update-form button {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #ff9933;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.update-form button:hover {
+  background-color: #e67300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .update-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .update-info,
+  .update-form-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+/* from line no 521 to 609 is for footer css */
+/* Footer styling */
+.footer {
+  width: 100%; /* Full width */
+  background: linear-gradient(to bottom, #1C2526, #000000); /* Deep gradient */
+  color: #f1f1f1;
+  padding: 40px 0 30px;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Footer content layout */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1140px; /* Avoid overlap */
+  margin: 0 auto;
+  padding: 0 15px; /* Prevent edge overflow */
+  gap: 40px; /* Space between sections */
+  box-sizing: border-box;
+}
+
+/* Logo section */
+.footer-section.logo {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Logo styling */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 24px; /* Larger for prominence */
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+/* Logo first part */
+.footer-logo span:first-child {
+  font-size: 26px;
+}
+
+/* Logo second part */
+.footer-logo span:last-child {
+  color: #FFD700; /* Gold color */
+  font-size: 22px;
+}
+
+/* Other sections */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Section heading */
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem; /* Clear size */
+  color: #FFD700; /* Gold for headings */
+  letter-spacing: 0.5px;
+}
+
+/* Section text and links */
+.footer-section p,
+.footer-section a,
+.footer-section li {
+  font-size: 0.9rem; /* Readable size */
+  color: #E0E0E0; /* Soft white */
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  transition: color 0.3s ease; /* Smooth hover */
+}
+
+/* Link hover effect */
+.footer-section a:hover {
+  color: #FFD700; /* Gold on hover */
+  text-decoration: none; /* No underline */
+}
+
+/* Bottom note */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 20px;
+  border-top: 1px solid #FFD700; /* Gold border */
+  margin-top: 30px;
+  color: #B0B0B0; /* Soft gray */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center; /* Center content */
+  }
+
+  .footer-logo {
+    align-items: center; /* Center logo */
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center; /* Center text */
+  }
+}

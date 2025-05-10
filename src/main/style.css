@@ -1,0 +1,426 @@
+/* ---------------- Updated Navbar ---------------- */
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #FF9933, #6A1B9A); /* Saffron to royal purple gradient */
+  background-size: 200% 200%; /* For pulse effect */
+  animation: pulse 5s ease-in-out infinite; /* Pulse animation */
+  padding: 20px 30px;
+  color: #FFD700; /* Gold text color */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid transparent; /* For glowing border */
+  border-image: linear-gradient(to right, #FFD700, #FF6F61) 1; /* Glowing gold to coral border */
+  transition: background 0.5s ease; /* Smooth transition for background change */
+}
+
+/* Navbar scrolled state */
+.navbar.scrolled {
+  background: linear-gradient(to right, #FFD700, #CC3300); /* Gold to deep red when scrolled */
+  animation: none; /* Disable pulse when scrolled */
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for logo */
+  transition: transform 0.3s ease; /* For hover animation */
+  animation: fadeIn 1s ease-out; /* Fade-in animation on load */
+}
+
+/* Logo hover effect */
+.logo:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Logo text styling */
+.logo-text {
+  font-family: 'Playfair Display', serif; /* Elegant font for logo */
+  color: #FFD700; /* Gold color for logo text */
+}
+
+/* Highlighted part of logo */
+.logo-text .highlight {
+  color: #CC3300; /* Deep red for highlight */
+  font-family: 'Dancing Script', cursive; /* Cursive for elegance */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  position: relative;
+  animation: fadeIn 1.2s ease-out; /* Fade-in animation with slight delay */
+}
+
+.nav-links a,
+.nav-links span {
+  text-decoration: none;
+  color: #FFD700; /* Gold text color */
+  padding: 12px 20px;
+  display: block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+  position: relative; /* For glowing underline */
+}
+
+/* Glowing effect on hover */
+.nav-links a:hover,
+.nav-links span:hover {
+  color: #CC3300; /* Deep red on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Glowing gold effect on hover */
+}
+
+/* Underline animation for nav links */
+.nav-links a::after,
+.nav-links span::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 8px;
+  left: 20px;
+  background: #CC3300; /* Deep red underline to match hover */
+  transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.nav-links a:hover::after,
+.nav-links span:hover::after {
+  width: calc(100% - 40px); /* Expand to fit link */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to right, #FF9933, #6A1B9A); /* Match navbar gradient */
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  border: 2px solid #FFD700; /* Gold border for luxury */
+  opacity: 0; /* For fade-in animation */
+  transform: translateY(10px); /* For bounce effect */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animation */
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  color: #FFD700; /* Gold text color */
+  padding: 12px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #CC3300; /* Deep red on hover */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glowing gold effect on hover */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Not Found Page */
+.not-found-container {
+  text-align: center;
+}
+
+.not-found-image {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* ---------------- Home Page Styling ---------------- */
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  min-height: calc(100vh - 60px); /* Ensure body takes up full viewport height minus navbar */
+  padding-bottom: 0px; /* Add space at the bottom to prevent footer overlap */
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.home-hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1585314062604-d5888df9c44a');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: #ff9933;
+  padding: 12px 25px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #fd6a39;
+}
+
+/* Highlights */
+.home-highlights {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff0e6;
+}
+
+.home-highlights h2 {
+  font-size: 2.2rem;
+  color: #a12d33;
+  margin-bottom: 30px;
+}
+
+.highlight-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.highlight-card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 12px;
+  border: 2px solid #ffd699;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-card h3 {
+  margin-top: 15px;
+  color: #cc3300;
+}
+
+/* Services */
+.home-services {
+  padding: 60px 20px;
+  background-color: #fffaf0;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  padding: 15px;
+  color: #b34700;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+/* Testimonials */
+.home-testimonials {
+  background-color: #fff0e6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.home-testimonials h2 {
+  font-size: 2rem;
+  color: #a12d33;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-style: italic;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  color: #4d2e00;
+  font-style: normal;
+}
+
+/* Featured Events */
+.home-featured-events {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #FFF8F0, #FFE6CC); /* Festive gradient */
+  text-align: center;
+}
+
+.home-featured-events h2 {
+  font-size: 2.2rem;
+  color: #CC3300;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  text-decoration-color: #FFD699;
+}
+
+.event-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .highlight-cards,
+  .service-cards,
+  .testimonial-cards,
+  .event-card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Mobile navbar adjustments */
+  .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #FF9933, #6A1B9A); /* Match navbar gradient */
+    padding: 10px 0;
+  }
+
+  /* Show nav links when active (via JS toggle) */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Dropdown adjustments for mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter for contrast */
+    margin: 0 auto;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Disable hover on mobile */
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block; /* Show via JS toggle */
+  }
+}
